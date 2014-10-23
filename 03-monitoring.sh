@@ -1,5 +1,6 @@
 #!/bin/sh -x
 
-apt-get install python-pip python-mysqldb python-flask python-gevent
+apt-get install python-pip python-mysqldb python-flask python-gevent python-setuptools
 
-pip install ../openstack-basics
+cd ../openstack-basics
+python setup.py install
