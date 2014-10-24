@@ -7,3 +7,4 @@ apt-get install percona-xtradb-cluster-56 -y --force-yes -qq
 export ip=$(hostname -i)
 mkdir -p /etc/mysql/conf.d
 envsubst < configs/galera-cluster.cnf > /etc/mysql/conf.d/galera-cluster.cnf
+/etc/init.d/mysql stop

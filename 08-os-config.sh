@@ -1,6 +1,9 @@
 #!/bin/sh -x
 
-cp configs/nova.conf /etc/nova/
+export ip=$(hostname -i)
+
+envsubst < configs/nova.conf > /etc/nova/nova.conf
+
 cp configs/neutron.conf /etc/neutron/
 cp configs/glance* /etc/glance/
 

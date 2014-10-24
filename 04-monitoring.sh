@@ -4,3 +4,4 @@ apt-get install python-pip python-mysqldb python-flask python-gevent python-setu
 
 cd ../openstack-basics
 python setup.py install
+nohup os_slb_checks & disown

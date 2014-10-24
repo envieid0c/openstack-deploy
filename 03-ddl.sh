@@ -22,3 +22,8 @@ mysql -e "CREATE DATABASE IF NOT EXISTS glance;"
 
 mysql -e "CREATE DATABASE IF NOT EXISTS keystone;"
 
+rabbitmqctl add_user openstack s3cretPass
+rabbitmqctl set_permissions openstack '.*' '.*' '.*'
+rabbitmqctl set_user_tags openstack administrator
+
+rabbitmqctl set_policy ha '.*' '{"ha-mode":"all"}'
