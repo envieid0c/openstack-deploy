@@ -1,0 +1,36 @@
+[ ]	Install MySQL
+
+[ ]	Install RabbitMQ
+
+[ ]	Bootstrap first node /etc/init.d/mysql bootstrap-pxc
+
+[ ]	echo yac > /var/lib/rabbitmq/.erlang.cookie
+
+[ ]	rabbitmqctl stop_app; rabbitmqctl join_cluster rabbit@host1 
+
+[ ]	rabbitmqctl change_cluster_node_type disc
+
+[ ]	rabbitmqctl start_app
+
+[ ]	Install DDL
+
+[ ]	Run other nodes /etc/init.d/mysql start
+
+[ ]	Check MySQL mysql -e "show status like 'wsrep%';"
+
+[ ]	Connect RabbitMQ to cluster
+
+[ ]	Check RabbitMQ http://10.0.0.2:15672
+
+[ ]	Install monitorings and haproxy
+
+[ ]	Check haproxy http://10.0.0.2:33062
+
+[ ]	Check mysql working: mysql -u openstack -ps3cretPass --host=127.0.0.1 --port=33060 -e "show variables like 'wsrep_node_name';"
+
+[ ]	Install keystone and openstack
+
+[ ]	Check out horizon http://10.0.0.2/horizon/ 
+
+[ ]	Create some data
+
